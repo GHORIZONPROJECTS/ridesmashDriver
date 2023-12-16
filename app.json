@@ -46,11 +46,6 @@
           "locationAlwaysAndWhenInUsePermission": "Allow Ridesmash to use your location."
         }
       ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "853d7918-3207-4662-b7f0-f3bff95a3670"
-      }
-    }
+    ]
   }
 }

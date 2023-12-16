@@ -15,6 +15,7 @@ import Loader from "../../components/loader";
 export default function ServiceOption({ navigation }) {
 
    const [selectedItem, setSelectedItem] = useState(null);
+   const [error, setError] = useState('')
    const [loading, setLoading ] = useState(false)
    const selectedData = [
     {value:'Car', title:'Car', image:require('../../../assets/images/register/car.png')},
@@ -45,7 +46,8 @@ export default function ServiceOption({ navigation }) {
       }, [isFocused]);
     
       const onSubmit = () => {
-        if(selectedItem === null) return;
+        if(selectedItem === null) 
+        return setError('Please choose and option');
         setLoading(true);
         WizardStore.update((s) => {
           s.progress = 33;
@@ -98,6 +100,11 @@ export default function ServiceOption({ navigation }) {
             </Pressable>
           )
         })}
+
+        {
+          error &&
+          <View><Text style={{color:'red'}}>{error}</Text></View>
+        }
 
         
         <Button
