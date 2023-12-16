@@ -59,15 +59,15 @@ console.log(driverInfo)
 
             
             
-              <UserNavigation />
+              {/* <UserNavigation /> */}
               
-               {/* {user 
+               {user 
                
                ? ( driverInfo ? <UserNavigation /> : <MultiStepNavigation />) 
                
                : <AuthNavigation />
                
-               } */}
+               }
 
               
               
